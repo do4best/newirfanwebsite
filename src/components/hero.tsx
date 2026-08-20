@@ -1,10 +1,11 @@
 import { Box, Button, Container } from "@mui/material";
 import { Typography } from "@mui/material";
 export default function Hero() {
+
     return (
         <Box sx={{ py: 10, textAlign: "center", bgcolor: "linear-gradient(180deg, #0a0f2c 0%, #1a237e 100%)" }}>
             <Container>
-                <Typography variant="h3" fontWeight={700} gutterBottom>
+                <Typography variant="h3" sx={{fontWeight:"700"}} gutterBottom>
                     Elevate Your Brand on Social Media
                 </Typography>
                 <Typography variant="h6" color="gray" gutterBottom>
