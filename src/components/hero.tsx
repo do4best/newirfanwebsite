@@ -3,12 +3,12 @@ import { Typography } from "@mui/material";
 export default function Hero() {
 
     return (
-        <Box sx={{ py: 10, textAlign: "center", bgcolor: "linear-gradient(180deg, #0a0f2c 0%, #1a237e 100%)" }}>
-            <Container>
+        <Box sx={{ py: 10, textAlign: "center",backgroundImage:"url('/disco.jpg')",backgroundSize:"cover",backgroundPosition:"center",height:"100vh" }}>
+            <Container sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%" }}>
                 <Typography variant="h3" sx={{fontWeight:"700"}} gutterBottom>
                     Elevate Your Brand on Social Media
                 </Typography>
-                <Typography variant="h6" color="gray" gutterBottom>
+                <Typography  variant="h6" color="gray" gutterBottom>
                     Social Media Marketing & Influencer Collaboration
                 </Typography>
                 <Box sx={{ mt: 4, display: "flex", justifyContent: "center", gap: 2 }}>
