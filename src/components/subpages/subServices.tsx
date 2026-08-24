@@ -10,8 +10,9 @@ type Services=
 function SubServices({services,Icons}:Services) {
     return (
         <>
-            <Box sx={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",width:"25%",height:"30%",border:"solid 1px ",borderRadius:5,paddingX:5}}>
-                <Icons sx={{fontSize:50}}/>
+            <Box sx={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",width:"25%",height:"50%",border:"solid 1px ",borderRadius:5,paddingX:5,paddingY:5}}>
+
+            <Icons sx={{fontSize:50}}/>
                 <Typography variant="h4">{services}</Typography>
             </Box>
         </>

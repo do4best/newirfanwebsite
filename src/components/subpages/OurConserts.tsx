@@ -6,14 +6,14 @@ import NightlifeIcon from '@mui/icons-material/Nightlife';
 import CelebrationIcon from '@mui/icons-material/Celebration';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 
-function Services() {
+function OurConserts() {
     return (
         <>
 
 
             <Box sx={{ bgcolor: "#0a0f2c", color: "white", minHeight: "100vh" }}>
                 <Typography align="center" variant="h1" sx={{ mb: 10 }}>
-                    Services
+                    Our Concerts and Events Details
                 </Typography>
                 <Box sx={{ display: "flex", justifyContent: "center", gap: 3 }}>
                     <SubServices Icons={EmojiEventsIcon} services="Corporate Events & After Works"/>
@@ -28,4 +28,4 @@ function Services() {
     );
 }
 
-export default Services;
+export default OurConserts;
