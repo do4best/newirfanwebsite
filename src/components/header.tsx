@@ -1,4 +1,5 @@
 'use client';
+import { motion } from "framer-motion";
 import { useState } from 'react';
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -38,14 +39,23 @@ function Header() {
         <>
             <AppBar position="static" sx={{ bgcolor: theme.palette.mode === 'dark' ? "background.paper" : "#0a0f2c" }}>
                 <Toolbar sx={{ justifyContent: "space-between" }}>
-                    <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                <motion.span initial={{
+                    opacity: 0,
+                    filter: "blur(5px)",
+                }}
+                animate={{
+                    opacity: 1,
+                    filter: "blur(0px)",
+                    transition: { duration: 0.5 },
+                }}>    <Typography variant="h6" sx={{ fontWeight: 600 }}>
                         Maverick Social
                     </Typography>
+                </motion.span>
 
                     {/* Desktop Navigation */}
                     <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 3 }}>
                         {navItems.map((item) => (
-                            <Button key={item} color="inherit">{item}</Button>
+                           <motion.button key={item} whileHover={{scale:1.1, transition:{duration:0.1}}} transition={{duration:0.5}}> <Button key={item} color="inherit">{item}</Button></motion.button>
                         ))}
                         <Button variant="outlined" color="inherit">Sign In</Button>
                     </Box>
