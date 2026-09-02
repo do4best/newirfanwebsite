@@ -9,7 +9,7 @@ export default function Footer() {
     ];
 
     return (
-        <Box sx={{ bgcolor: "#0a0f2c", py: 6, mt: 8 }}>
+        <Box sx={{ bgcolor: "#000",color:"#fff", py: 6, mt: 8 }}>
             <Container>
                 <Grid container spacing={4}>
                     {sections.map((section) => (
@@ -22,7 +22,7 @@ export default function Footer() {
                     ))}
                 </Grid>
                 <Typography variant="body2" color="gray" sx={{ mt: 4 }}>
-                    © 2024 Maverick Social. All rights reserved.
+                    © 2026 Maverick Social. All rights reserved.
                 </Typography>
             </Container>
         </Box>

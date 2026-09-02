@@ -23,7 +23,7 @@ export default function Hero() {
                     Social Media Marketing & Influencer Collaboration
                 </Typography>
                 <Box sx={{ mt: 4, display: "flex", justifyContent: "center", gap: 2 }}>
-                    <Button variant="contained" sx={{ bgcolor: "#1976d2" }}>Get Started</Button>
+                    <Button variant="contained" sx={{ bgcolor: "#fff" }}>Get Started</Button>
                     <Button variant="outlined" color="inherit">Our Services</Button>
                 </Box>
             </Container>

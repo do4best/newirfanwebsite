@@ -11,7 +11,7 @@ function OurConserts() {
         <>
 
 
-            <Box sx={{ bgcolor: "#0a0f2c", color: "white", minHeight: "100vh" }}>
+            <Box sx={{ bgcolor: "#000", color: "white", minHeight: "100vh" }}>
                 <Typography align="center" variant="h1" sx={{ mb: 10 }}>
                     Our Concerts and Events Details
                 </Typography>

@@ -1,4 +1,5 @@
 'use client';
+
 import { motion } from "framer-motion";
 import { useState } from 'react';
 import MenuIcon from "@mui/icons-material/Menu";
@@ -24,7 +25,9 @@ import {
 import { useThemeToggle } from "@/app/theme";
 import TranslationThing from "@/app/translationThing";
 
+
 const navItems = ["Information", "Services", "Upcoming Gigs", "Media", "Reservation"];
+
 
 function Header() {
     const [drawerOpen, setDrawerOpen] = useState(false);
@@ -47,7 +50,7 @@ function Header() {
                     opacity: 1,
                     filter: "blur(0px)",
                     transition: { duration: 0.5 },
-                }}>    <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                }}>    <Typography variant="h6" className={`font-disco`} sx={{ fontWeight: 400 }}>
                         Maverick Social
                     </Typography>
                 </motion.span>
