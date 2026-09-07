@@ -26,7 +26,13 @@ import { useThemeToggle } from "@/app/theme";
 import TranslationThing from "@/app/translationThing";
 
 
-const navItems = ["Information", "Services", "Upcoming Gigs", "Media", "Reservation"];
+const navItems = [
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Upcoming Gigs", href: "#upcoming-gigs" },
+    { label: "Media", href: "#media" },
+    { label: "Reservation", href: "#reservation" },
+];
 
 
 function Header() {
@@ -58,9 +64,16 @@ function Header() {
                     {/* Desktop Navigation */}
                     <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 3 }}>
                         {navItems.map((item) => (
-                           <motion.button key={item} whileHover={{scale:1.1, transition:{duration:0.1}}} transition={{duration:0.5}}> <Button key={item} color="inherit">{item}</Button></motion.button>
+                           <motion.button key={item.label} whileHover={{scale:1.1, transition:{duration:0.1}}} transition={{duration:0.5}}>
+                               <Button
+                                   key={item.label}
+                                   href={item.href}
+                                   sx={{ color: "white", textTransform: "none", fontWeight: "bold" }}
+                               >
+                                   {item.label}
+                               </Button></motion.button>
                         ))}
-                        <Button variant="outlined" color="inherit">Sign In</Button>
+
                     </Box>
 
                     {/* Actions: Theme Toggle & Mobile Menu */}
@@ -122,8 +135,8 @@ function Header() {
                     <Divider sx={{ mb: 2 }} />
                     <List sx={{ flexGrow: 1 }}>
                         {navItems.map((item) => (
-                            <ListItemButton key={item} onClick={toggleDrawer(false)}>
-                                <ListItemText primary={item} />
+                            <ListItemButton key={item.label} onClick={toggleDrawer(false)}>
+                                <ListItemText primary={item.href} />
                             </ListItemButton>
                         ))}
                     </List>

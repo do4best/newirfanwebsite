@@ -9,7 +9,10 @@ import HandshakeIcon from '@mui/icons-material/Handshake';
 function OurConserts() {
     return (
         <>
-
+            <Box
+                id="media"
+                sx={{ bgcolor: "#000", color: "white", minHeight: "100vh", py: 8 }}
+            >
 
             <Box sx={{ bgcolor: "#000", color: "white", minHeight: "100vh" }}>
                 <Typography align="center" variant="h1" sx={{ mb: 10 }}>
@@ -22,7 +25,7 @@ function OurConserts() {
                     <SubServices Icons={HandshakeIcon} services="Nostalgia Discos"/>
                 </Box>
             </Box>
-
+            </Box>
 
         </>
     );
