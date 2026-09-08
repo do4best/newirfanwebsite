@@ -31,22 +31,22 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
+                                     children,
+                                   }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${discoFont.variable}`}
-    >
+      <html
+          lang="en"
+          className={`${discoFont.variable}`}
+      >
       <body className="min-h-full flex flex-col">
-        <Themes>
-          <Header />
-          {children}
-          <Footer />
-        </Themes>
+      <Themes>
+        <Header />
+        {children}
+        <Footer />
+      </Themes>
       </body>
-    </html>
+      </html>
   );
 }
