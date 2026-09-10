@@ -24,6 +24,7 @@ import {
 
 import { useThemeToggle } from "@/app/theme";
 import TranslationThing from "@/app/translationThing";
+import Image from "next/image";
 
 
 const navItems = [
@@ -48,6 +49,8 @@ function Header() {
         <>
             <AppBar position="static" sx={{ bgcolor: theme.palette.mode === 'dark' ? "background.paper" : "#0a0f2c" }}>
                 <Toolbar sx={{ justifyContent: "space-between" }}>
+                    <Box sx={{ display: { xs: "none", md: "flex" }, flexDirection:"row", alignItems: "center", gap: 3 }}>
+                    <Image src={"/irfanlogo.png"} alt={"Log"} width={80} height={80} style={{borderRadius:"50%"}}/>
                 <motion.span initial={{
                     opacity: 0,
                     filter: "blur(5px)",
@@ -61,6 +64,7 @@ function Header() {
                     </Typography>
                 </motion.span>
 
+                    </Box>
                     {/* Desktop Navigation */}
                     <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 3 }}>
                         {navItems.map((item) => (

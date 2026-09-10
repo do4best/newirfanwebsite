@@ -60,7 +60,7 @@ export default function Hero() {
                                 }}
                                 gutterBottom
                             >
-                                Elevate Your Brand on Social Media
+                               Welcome to Dejavu
                             </Typography>
                         </motion.div>
 
@@ -74,7 +74,7 @@ export default function Hero() {
                                 variant="h6"
                                 sx={{ color: "rgba(255,255,255,0.8)", mb: 4 }}
                             >
-                                Social Media Marketing & Influencer Collaboration
+                                Your Ultimate Choice for 80s & 90s Music.
                             </Typography>
                         </motion.div>
 
@@ -84,44 +84,44 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, delay: 1 }}
                         >
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    justifyContent: { xs: "center", md: "flex-start" },
-                                    gap: 2,
-                                    flexWrap: "wrap",
-                                }}
-                            >
-                                <Button
-                                    variant="contained"
-                                    sx={{
-                                        bgcolor: "#000",
-                                        color: "white",
-                                        px: 3,
-                                        py: 1.5,
-                                        "&:hover": { bgcolor: "#222", transform: "scale(1.05)" },
-                                        transition: "all 0.3s ease",
-                                    }}
-                                >
-                                    Get Started
-                                </Button>
-                                <Button
-                                    variant="outlined"
-                                    sx={{
-                                        borderColor: "white",
-                                        color: "white",
-                                        px: 3,
-                                        py: 1.5,
-                                        "&:hover": {
-                                            bgcolor: "rgba(255,255,255,0.1)",
-                                            transform: "scale(1.05)",
-                                        },
-                                        transition: "all 0.3s ease",
-                                    }}
-                                >
-                                    Our Services
-                                </Button>
-                            </Box>
+                            {/*<Box*/}
+                            {/*    sx={{*/}
+                            {/*        display: "flex",*/}
+                            {/*        justifyContent: { xs: "center", md: "flex-start" },*/}
+                            {/*        gap: 2,*/}
+                            {/*        flexWrap: "wrap",*/}
+                            {/*    }}*/}
+                            {/*>*/}
+                            {/*    <Button*/}
+                            {/*        variant="contained"*/}
+                            {/*        sx={{*/}
+                            {/*            bgcolor: "#000",*/}
+                            {/*            color: "white",*/}
+                            {/*            px: 3,*/}
+                            {/*            py: 1.5,*/}
+                            {/*            "&:hover": { bgcolor: "#222", transform: "scale(1.05)" },*/}
+                            {/*            transition: "all 0.3s ease",*/}
+                            {/*        }}*/}
+                            {/*    >*/}
+                            {/*        Get Started*/}
+                            {/*    </Button>*/}
+                            {/*    <Button*/}
+                            {/*        variant="outlined"*/}
+                            {/*        sx={{*/}
+                            {/*            borderColor: "white",*/}
+                            {/*            color: "white",*/}
+                            {/*            px: 3,*/}
+                            {/*            py: 1.5,*/}
+                            {/*            "&:hover": {*/}
+                            {/*                bgcolor: "rgba(255,255,255,0.1)",*/}
+                            {/*                transform: "scale(1.05)",*/}
+                            {/*            },*/}
+                            {/*            transition: "all 0.3s ease",*/}
+                            {/*        }}*/}
+                            {/*    >*/}
+                            {/*        Our Services*/}
+                            {/*    </Button>*/}
+                            {/*</Box>*/}
                         </motion.div>
                     </Box>
 

@@ -1,8 +1,9 @@
-'use client';
-import React from 'react';
-import { PaletteMode, CssBaseline } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { createContext, useContext } from "react";
+"use client";
+
+import React, { createContext, useContext, useState,useEffect } from "react";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { PaletteMode } from "@mui/material";
 
 type ThemeToggleContextType = {
     mode: PaletteMode;
@@ -10,28 +11,28 @@ type ThemeToggleContextType = {
 };
 
 const ThemeToggleContext = createContext<ThemeToggleContextType>({
-    mode: 'light',
+    mode: "light",
     toggleTheme: () => {},
 });
 
 export const useThemeToggle = () => useContext(ThemeToggleContext);
 
-export default function Themes({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
-    const [mode, setMode] = React.useState<PaletteMode>('light');
+export default function Themes({ children }: { children: React.ReactNode }) {
+    const [mode, setMode] = useState<PaletteMode>("light");
 
-    const theme = React.useMemo(() => createTheme({
+    const theme = createTheme({
         palette: {
             mode,
         },
-    }), [mode]);
+    });
 
-    const toggleTheme = React.useCallback(() => {
-        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
-    }, []);
+    const toggleTheme = () => {
+        setMode((prev) => (prev === "light" ? "dark" : "light"));
+    };
+    // useEffect(() => {
+    //     document.documentElement.classList.toggle("dark", mode === "dark");
+    // }, [mode]);
+
 
     return (
         <ThemeToggleContext.Provider value={{ mode, toggleTheme }}>
