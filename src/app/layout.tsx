@@ -40,7 +40,7 @@ export default function RootLayout({
           lang="en"
           className={`${discoFont.variable}`}
       >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" >
       <Themes>
         <Header />
         {children}

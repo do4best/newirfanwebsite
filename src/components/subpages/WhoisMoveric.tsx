@@ -6,7 +6,7 @@ export default function WhoisMaverick() {
     return (
         <Box
             id="about"
-            sx={{ bgcolor: "#000", color: "white", minHeight: "100vh", py: 8 }}
+            sx={{ bgcolor: "background.default", color: "text.primary", minHeight: "100vh", py: 8 }}
         >
         <Box
             sx={{
@@ -16,8 +16,8 @@ export default function WhoisMaverick() {
                 alignItems: "center",
                 width: "100%",
                 height: "100vh",
-                bgcolor: "#000",
-                color: "white",
+                bgcolor: "primary",
+                color: "text.primary",
                 textAlign: "center",
                 px: 3, // padding for smaller screens
             }}
@@ -27,7 +27,7 @@ export default function WhoisMaverick() {
                 sx={{
                     fontWeight: "bold",
                     mb: 3,
-                    color: "primary.main",
+                    color: "text.primary",
                 }}
             >
                 Who is DJ Maverick?
@@ -39,7 +39,7 @@ export default function WhoisMaverick() {
                     maxWidth: "800px",
                     lineHeight: 1.8,
                     fontSize: "1.1rem",
-                    color: "grey.300",
+                    color: "grey.500",
                 }}
             >
                 DJ Maverick is a nostalgia-driven party DJ specialized in 80s, 90s and

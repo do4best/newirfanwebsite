@@ -17,7 +17,7 @@ export default function UpcomingGigs() {
     return (
         <Box
             id="upcoming-gigs"
-            sx={{ bgcolor: "#000", color: "white", minHeight: "100vh", py: 8 }}
+            sx={{ bgcolor: "background.default", color: "text.primary", minHeight: "100vh", py: 8 }}
         >
         <Box
             sx={{

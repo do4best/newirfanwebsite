@@ -23,7 +23,7 @@ export default function Hero() {
                 sx={{
                     position: "absolute",
                     inset: 0,
-                    background: "linear-gradient(to bottom right, rgba(0,0,0,0.75), rgba(0,0,0,0.35))",
+                    background: "linear-gradient(background.default, text.primary, primary.main)",
                 }}
             />
 
@@ -31,7 +31,7 @@ export default function Hero() {
                 sx={{
                     position: "relative",
                     zIndex: 2,
-                    color: "white",
+                    color: "text.primary",
                 }}
             >
                 <Box
@@ -57,6 +57,7 @@ export default function Hero() {
                                 sx={{
                                     fontWeight: 700,
                                     textShadow: "2px 2px 10px rgba(0,0,0,0.6)",
+
                                 }}
                                 gutterBottom
                             >
@@ -72,7 +73,7 @@ export default function Hero() {
                         >
                             <Typography
                                 variant="h6"
-                                sx={{ color: "rgba(255,255,255,0.8)", mb: 4 }}
+                                sx={{ color: "text.secondary", mb: 4 }}
                             >
                                 Your Ultimate Choice for 80s & 90s Music.
                             </Typography>

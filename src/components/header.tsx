@@ -47,7 +47,7 @@ function Header() {
 
     return (
         <>
-            <AppBar position="static" sx={{ bgcolor: theme.palette.mode === 'dark' ? "background.paper" : "#0a0f2c" }}>
+            <AppBar position="static" sx={{ bgcolor: theme.palette.mode === 'dark' ? "background.paper" : "currentColor.main" }}>
                 <Toolbar sx={{ justifyContent: "space-between" }}>
                     <Box sx={{ display: { xs: "none", md: "flex" }, flexDirection:"row", alignItems: "center", gap: 3 }}>
                     <Image src={"/irfanlogo.png"} alt={"Log"} width={80} height={80} style={{borderRadius:"50%"}}/>
