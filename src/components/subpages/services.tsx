@@ -15,7 +15,7 @@ const servicesData = [
 export default function Services() {
     return (
 
-        <Box sx={{ bgcolor: "#000", color: "white", minHeight: "100vh", py: 8 }}>
+        <Box sx={{ bgcolor: "background.default", color: "background.primary", minHeight: "100vh",minWidth: "100vh", py: 8 }}>
             <Typography align="center" variant="h2" sx={{ mb: 6, fontWeight: "bold" }}>
                 Services
             </Typography>

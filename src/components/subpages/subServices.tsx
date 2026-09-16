@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import React from "react";
 
 interface SubServicesProps {
     Icons: React.ElementType;
@@ -18,6 +19,7 @@ export default function SubServices({ Icons, services, description }: SubService
                 borderRadius: 2,
                 p: 4,
                 width: 250,
+                
                 textAlign: "center",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 "&:hover": {

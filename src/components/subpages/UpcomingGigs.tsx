@@ -23,7 +23,7 @@ export default function UpcomingGigs() {
             sx={{
                 py: 10,
                 textAlign: "center",
-                backgroundImage: "url('/disco.jpg')",
+                backgroundImage: "url('/club1.jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 height: "100vh",
@@ -59,7 +59,8 @@ export default function UpcomingGigs() {
                                 border: "1px solid white",
                                 p: 5,
                                 maxWidth: 400,
-                                bgcolor: "rgba(0,0,0,0.6)",
+                                bgcolor: "background.default",
+                                color: "text.primary",
                                 borderRadius: 2,
                                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
                                 "&:hover": {
@@ -68,7 +69,7 @@ export default function UpcomingGigs() {
                                 },
                             }}
                         >
-                            <Typography variant="h6" color="grey.300" gutterBottom>
+                            <Typography variant="h6" color="text.primary" gutterBottom>
                                 {gig.text}
                             </Typography>
                         </Box>
