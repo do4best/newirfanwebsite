@@ -1,5 +1,6 @@
 'use client';
 
+
 import { motion } from "framer-motion";
 import { useState } from 'react';
 import MenuIcon from "@mui/icons-material/Menu";
@@ -25,6 +26,7 @@ import {
 import { useThemeToggle } from "@/app/theme";
 import TranslationThing from "@/app/translationThing";
 import Image from "next/image";
+import { discoFont, poppins } from "@/app/fonts/manyFont";
 
 
 const navItems = [
@@ -59,7 +61,7 @@ function Header() {
                     opacity: 1,
                     filter: "blur(0px)",
                     transition: { duration: 0.5 },
-                }}>    <Typography variant="h6" className={`font-disco`} sx={{ fontWeight: 400 }}>
+                }}>    <Typography variant="h6" className={discoFont.className} sx={{ fontWeight: 400 }}>
                         Maverick Social
                     </Typography>
                 </motion.span>
@@ -71,8 +73,8 @@ function Header() {
                            <motion.button key={item.label} whileHover={{scale:1.1, transition:{duration:0.1}}} transition={{duration:0.5}}>
                                <Button
                                    key={item.label}
-                                   href={item.href}
-                                   sx={{ color: "white", textTransform: "none", fontWeight: "bold" }}
+                                   href={item.href} className={poppins.className}
+                                   sx={{ color: "text.primary", textTransform: "none", fontWeight: "600" }}
                                >
                                    {item.label}
                                </Button></motion.button>
@@ -129,7 +131,7 @@ function Header() {
                     role="presentation"
                 >
                     <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 1 }}>
-                        <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                        <Typography variant="h6" sx={{ fontWeight: 600 }} className={discoFont.variable}>
                             Maverick Social
                         </Typography>
                         <IconButton onClick={toggleDrawer(false)} aria-label="close drawer">

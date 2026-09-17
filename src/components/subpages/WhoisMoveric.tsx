@@ -1,5 +1,7 @@
 import React from 'react';
+import {poppins} from "@/app/fonts/manyFont";
 import {Box, Typography} from "@mui/material";
+
 
 
 export default function WhoisMaverick() {
@@ -22,10 +24,10 @@ export default function WhoisMaverick() {
                 px: 3, // padding for smaller screens
             }}
         >
-            <Typography
+            <Typography className={poppins.className}
                 variant="h2"
                 sx={{
-                    fontWeight: "bold",
+                    fontWeight: "700",
                     mb: 3,
                     color: "text.primary",
                 }}
@@ -33,13 +35,14 @@ export default function WhoisMaverick() {
                 Who is DJ Maverick?
             </Typography>
 
-            <Typography
+            <Typography className={poppins.className}
                 variant="body1"
                 sx={{
                     maxWidth: "800px",
                     lineHeight: 1.8,
                     fontSize: "1.1rem",
                     color: "grey.500",
+                    fontWeight: "500",
                 }}
             >
                 DJ Maverick is a nostalgia-driven party DJ specialized in 80s, 90s and

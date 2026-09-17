@@ -1,8 +1,12 @@
 'use client'
-
-import { Box, Button, Container, Typography } from "@mui/material";
+import localFont from "next/font/local";
+import { Box,  Container, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-
+import { poppins } from "@/app/fonts/manyFont";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import { FacebookRounded} from "@mui/icons-material";
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import XIcon from '@mui/icons-material/X';
 export default function Hero() {
     return (
         <Box
@@ -52,7 +56,7 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
                         >
-                            <Typography
+                            <Typography className={poppins.className}
                                 variant="h2"
                                 sx={{
                                     fontWeight: 700,
@@ -71,12 +75,18 @@ export default function Hero() {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1, delay: 0.5 }}
                         >
-                            <Typography
+                            <Typography className={poppins.className}
                                 variant="h6"
                                 sx={{ color: "text.secondary", mb: 4 }}
                             >
                                 Your Ultimate Choice for 80s & 90s Music.
                             </Typography>
+                            <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" }, gap: 2, flexWrap: "wrap",marginLeft:15 }}>
+                                <a href="https://www.instagram.com/maverick.dj" target="_blank"><InstagramIcon sx={{ fontSize: 30 }} /></a>
+                            <FacebookRounded sx={{fontSize:30}}/>
+                                <YouTubeIcon sx={{fontSize:30}}/>
+                                <XIcon sx={{fontSize:30}}/>
+                            </Box>
                         </motion.div>
 
                         {/* Buttons with hover + motion */}

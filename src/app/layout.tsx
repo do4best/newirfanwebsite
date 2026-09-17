@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
+
 import "./globals.css";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -16,11 +16,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const discoFont = localFont({
-  src:"/fonts/MexcellentRg.otf",
-  variable: "--font-disco",
-  display: "swap",
-});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -38,7 +34,7 @@ export default function RootLayout({
   return (
       <html
           lang="en"
-          className={`${discoFont.variable}`}
+          className={``}
       >
       <body className="min-h-full flex flex-col" >
       <Themes>
