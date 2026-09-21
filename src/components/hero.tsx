@@ -23,11 +23,11 @@ export default function Hero() {
         useEffect(() => {
             const interval = setInterval(() => {
                 setIndex((prev) => (prev + 1) % backgrounds.length);
-            }, 10000);
+            }, 30000);
             return () => clearInterval(interval);
         }, []);
     return (
-        <Box sx={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}>
+        <Box sx={{ position: "relative", minHeight: "100vh", overflow: "hidden"}}>
             <AnimatePresence mode="wait">
                 <MotionBox
                     key={index}
@@ -41,10 +41,10 @@ export default function Hero() {
                         alignItems: "center",
                         justifyContent: "center",
                     }}
-                    initial={{ opacity: 0, filter: "blur(10px)" }}
-                    animate={{ opacity: 1, filter: "blur(0px)" }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1.5 }}
+                    initial={{ opacity: 0, x:45 }}
+                    animate={{ opacity: 1, x:0 }}
+                    exit={{ opacity: 0,rotate:-45 }}
+                    transition={{ duration: 0.5 }}
                 >
             {/* Gradient overlay for better text contrast */}
             <Box

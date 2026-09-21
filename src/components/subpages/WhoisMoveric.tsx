@@ -1,7 +1,8 @@
+'use client'
 import React from 'react';
 import {poppins} from "@/app/fonts/manyFont";
 import {Box, Typography} from "@mui/material";
-
+import {motion} from "framer-motion";
 
 
 export default function WhoisMaverick() {
@@ -24,6 +25,9 @@ export default function WhoisMaverick() {
                 px: 3, // padding for smaller screens
             }}
         >
+            <motion.div initial={{opacity:0,y:-50}}
+                        animate={{opacity:3,y:0}}
+                        transition={{duration:3,ease:"easeInOut"}}>
             <Typography className={poppins.className}
                 variant="h2"
                 sx={{
@@ -34,6 +38,7 @@ export default function WhoisMaverick() {
             >
                 Who is DJ Maverick?
             </Typography>
+
 
             <Typography className={poppins.className}
                 variant="body1"
@@ -50,6 +55,7 @@ export default function WhoisMaverick() {
                 unforgettable dancefloor moments at corporate events, clubs and private
                 parties.
             </Typography>
+            </motion.div>
         </Box>
         </Box>
     );
