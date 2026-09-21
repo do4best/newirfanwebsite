@@ -52,16 +52,16 @@ function Header() {
             <AppBar position="static" sx={{ bgcolor: theme.palette.mode === 'dark' ? "background.paper" : "currentColor.main" }}>
                 <Toolbar sx={{ justifyContent: "space-between" }}>
                     <Box sx={{ display: { xs: "none", md: "flex" }, flexDirection:"row", alignItems: "center", gap: 3 }}>
-                    <Image src={"/irfanlogo.png"} alt={"Log"} width={80} height={80} style={{borderRadius:"50%"}}/>
+                    <Image src={"/irfanlogo.png"} alt={"Log"} width={100} height={100} style={{borderRadius:"50%"}}/>
                 <motion.span initial={{
                     opacity: 0,
                     filter: "blur(5px)",
                 }}
                 animate={{
                     opacity: 1,
-                    filter: "blur(0px)",
+                    filter: "blur(0.1px)",
                     transition: { duration: 0.5 },
-                }}>    <Typography variant="h6" className={discoFont.className} sx={{ fontWeight: 400 }}>
+                }}>    <Typography variant="h6"  sx={{ fontWeight: 400 }}>
                         Maverick Social
                     </Typography>
                 </motion.span>
@@ -74,12 +74,11 @@ function Header() {
                                <Button
                                    key={item.label}
                                    href={item.href} className={poppins.className}
-                                   sx={{ color: "text.primary", textTransform: "none", fontWeight: "600" }}
-                               >
+                                   sx={{ color: "text.primary", textTransform: "none", fontWeight: "600" }}>
                                    {item.label}
+
                                </Button></motion.button>
                         ))}
-
                     </Box>
 
                     {/* Actions: Theme Toggle & Mobile Menu */}

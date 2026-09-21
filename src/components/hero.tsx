@@ -1,27 +1,51 @@
 'use client'
 import localFont from "next/font/local";
 import { Box,  Container, Typography } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion,AnimatePresence } from "framer-motion";
 import { poppins } from "@/app/fonts/manyFont";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { FacebookRounded} from "@mui/icons-material";
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import XIcon from '@mui/icons-material/X';
+import {useEffect,useState} from "react";
+
+const MotionBox = motion(Box);
 export default function Hero() {
+    const backgrounds: string[] = [
+        "url('/disco.jpg')",
+        "url('/disco1.jpg')",
+        "url('/disco2.jpg')",
+    ];
+
+        const [index, setIndex] = useState(0);
+
+        // Change background every 2 seconds
+        useEffect(() => {
+            const interval = setInterval(() => {
+                setIndex((prev) => (prev + 1) % backgrounds.length);
+            }, 10000);
+            return () => clearInterval(interval);
+        }, []);
     return (
-        <Box
-            sx={{
-                position: "relative",
-                minHeight: "100vh",
-                backgroundImage: "url('/disco.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                display: "flex",
-                alignItems: "center",
-                overflow: "hidden",
-                py: { xs: 8, md: 0 },
-            }}
-        >
+        <Box sx={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}>
+            <AnimatePresence mode="wait">
+                <MotionBox
+                    key={index}
+                    sx={{
+                        position: "absolute",
+                        inset: 0,
+                        backgroundImage: backgrounds[index],
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                    }}
+                    initial={{ opacity: 0, filter: "blur(10px)" }}
+                    animate={{ opacity: 1, filter: "blur(0px)" }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1.5 }}
+                >
             {/* Gradient overlay for better text contrast */}
             <Box
                 sx={{
@@ -155,6 +179,8 @@ export default function Hero() {
                     </motion.div>
                 </Box>
             </Container>
+                </MotionBox>
+            </AnimatePresence>
         </Box>
     );
 }
