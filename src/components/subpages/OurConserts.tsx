@@ -11,14 +11,14 @@ function OurConserts() {
         <>
             <Box
                 id="media"
-                sx={{ bgcolor: "#000", color: "white", minHeight: "100vh", py: 8 }}
+                sx={{ bgcolor: "#000", color: "white", minHeight: "100vh", py: { xs: 5, md: 8 }, px: 2, boxSizing: "border-box" }}
             >
 
-            <Box sx={{ bgcolor: "#000", color: "white", minHeight: "100vh" }}>
-                <Typography align="center" variant="h1" sx={{ mb: 10 }}>
+            <Box sx={{ bgcolor: "#000", color: "white" }}>
+                <Typography align="center" variant="h1" sx={{ mb: { xs: 4, md: 10 }, fontSize: { xs: "2rem", sm: "3rem", md: "3.75rem" } }} >
                     Our Concerts and Events Details
                 </Typography>
-                <Box sx={{ display: "flex", justifyContent: "center", gap: 3 }}>
+                <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 3, width: "100%" }}>
                     <SubServices Icons={EmojiEventsIcon} services="Corporate Events & After Works"/>
                     <SubServices Icons={NightlifeIcon} services="Club Night & Theme Parties"/>
                     <SubServices Icons={CelebrationIcon} services="Private Parties & Birthdays"/>

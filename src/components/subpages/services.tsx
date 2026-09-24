@@ -15,12 +15,12 @@ const servicesData = [
 export default function Services() {
     return (
 
-        <Box sx={{xs:"100%", bgcolor: "background.default", color: "background.primary", minHeight: "100vh",minWidth: "100vh", py: 8 }}>
-            <Typography align="center" variant="h2" sx={{ mb: 6, fontWeight: "bold" }}>
+        <Box sx={{ bgcolor: "background.default", color: "text.primary", minHeight: "100vh", width: "100%", py: { xs: 5, md: 8 }, px: 2, boxSizing: "border-box" }}>
+            <Typography align="center" variant="h2" sx={{ mb: { xs: 4, md: 6 }, fontWeight: "bold", fontSize: { xs: "2.25rem", sm: "3rem", md: "3.75rem" } }}>
                 Services
             </Typography>
 
-            <Box sx={{ display: "flex", justifyContent: "center", gap: 3, flexWrap: "wrap",xs:"100%",width:"100%" }}>
+            <Box sx={{ display: "flex", justifyContent: "center", gap: 3, flexWrap: "wrap", width: "100%" }}>
                 {servicesData.map((service, index) => (
                     <SubServices key={index} Icons={service.icon} services={service.label} />
                 ))}

@@ -28,7 +28,8 @@ import TranslationThing from "@/app/translationThing";
 import Image from "next/image";
 import { discoFont, poppins } from "@/app/fonts/manyFont";
 
-
+const MotionSpan = motion.create("span");
+const MotionButton = motion.create(Button);
 const navItems = [
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
@@ -53,7 +54,7 @@ function Header() {
                 <Toolbar sx={{ justifyContent: "space-between" }}>
                     <Box sx={{ display: { xs: "none", md: "flex" }, flexDirection:"row", alignItems: "center", gap: 3 }}>
                     <Image src={"/irfanlogo.png"} alt={"Log"} width={100} height={100} style={{borderRadius:"50%"}}/>
-                <motion.span initial={{
+                <MotionSpan initial={{
                     opacity: 0,
                     filter: "blur(5px)",
                 }}
@@ -64,20 +65,21 @@ function Header() {
                 }}>    <Typography variant="h6"  sx={{ fontWeight: 400 }}>
                         Maverick Social
                     </Typography>
-                </motion.span>
+                </MotionSpan>
 
                     </Box>
                     {/* Desktop Navigation */}
                     <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 3 }}>
                         {navItems.map((item) => (
-                           <motion.button key={item.label} whileHover={{scale:1.1, transition:{duration:0.1}}} transition={{duration:0.5}}>
-                               <Button
-                                   key={item.label}
-                                   href={item.href} className={poppins.className}
-                                   sx={{ color: "text.primary", textTransform: "none", fontWeight: "600" }}>
-                                   {item.label}
-
-                               </Button></motion.button>
+                            <MotionButton
+                                key={item.label}
+                                href={item.href}
+                                className={poppins.className}
+                                whileHover={{ scale: 1.1, transition: { duration: 0.1 } }}
+                                transition={{ duration: 0.5 }}
+                                sx={{ color: "text.primary", textTransform: "none", fontWeight: "600" }}>
+                                {item.label}
+                            </MotionButton>
                         ))}
                     </Box>
 
@@ -141,7 +143,7 @@ function Header() {
                     <List sx={{ flexGrow: 1 }}>
                         {navItems.map((item) => (
                             <ListItemButton key={item.label} onClick={toggleDrawer(false)}>
-                                <ListItemText primary={item.href} />
+                                <ListItemText primary={item.label} />
                             </ListItemButton>
                         ))}
                     </List>

@@ -17,9 +17,10 @@ export default function SubServices({ Icons, services, description }: SubService
                 justifyContent: "center",
                 bgcolor: "rgba(255,255,255,0.05)",
                 borderRadius: 2,
-                p: 4,
-                width: 250,
-                
+                p: { xs: 3, md: 4 },
+                width: { xs: "100%", sm: 250 },
+                maxWidth: 320,
+                boxSizing: "border-box",
                 textAlign: "center",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 "&:hover": {
