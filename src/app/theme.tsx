@@ -11,14 +11,14 @@ type ThemeToggleContextType = {
 };
 
 const ThemeToggleContext = createContext<ThemeToggleContextType>({
-    mode: "light",
+    mode: "dark",
     toggleTheme: () => {},
 });
 
 export const useThemeToggle = () => useContext(ThemeToggleContext);
 
 export default function Themes({ children }: { children: React.ReactNode }) {
-    const [mode, setMode] = useState<PaletteMode>("light");
+    const [mode, setMode] = useState<PaletteMode>("dark");
 
     const theme = createTheme({
         palette: {

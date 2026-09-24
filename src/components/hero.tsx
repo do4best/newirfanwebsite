@@ -107,7 +107,7 @@ export default function Hero() {
                             </Typography>
                             <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" }, gap: 2, flexWrap: "wrap",marginLeft:15 }}>
                                 <a href="https://www.instagram.com/maverick.dj" target="_blank"><InstagramIcon sx={{ fontSize: 30 }} /></a>
-                            <FacebookRounded sx={{fontSize:30}}/>
+                       <a href="https://www.facebook.com/maverickhelsinki" target="_blank">     <FacebookRounded sx={{fontSize:30}}/></a>
                                 <YouTubeIcon sx={{fontSize:30}}/>
                                 <XIcon sx={{fontSize:30}}/>
                             </Box>
