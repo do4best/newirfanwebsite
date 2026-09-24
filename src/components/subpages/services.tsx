@@ -20,7 +20,7 @@ export default function Services() {
                 Services
             </Typography>
 
-            <Box sx={{ display: "flex", justifyContent: "center", gap: 3, flexWrap: "wrap" }}>
+            <Box sx={{ display: "flex", justifyContent: "center", gap: 3, flexWrap: "wrap",xs:"100%",width:"100%" }}>
                 {servicesData.map((service, index) => (
                     <SubServices key={index} Icons={service.icon} services={service.label} />
                 ))}
